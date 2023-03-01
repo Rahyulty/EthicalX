@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Grid, Card, Row, Text } from '@nextui-org/react';
+import { Container, Grid, Card, Row, Text, Col } from '@nextui-org/react';
 
 const data = [
   { name: 'EthicalXpress Black Tee', price: '$9.99', image: 'https://theecohub.com/wp-content/uploads/2021/06/eco-friendly-t-shirts-tentree-455x683.jpg' },
   { name: 'Plant Wrappers 1', price: '$49.99', image: 'https://footwearnews.com/wp-content/uploads/2021/04/Reebok_FloatrideEnergyGrow-1.jpg?w=700&h=437&crop=1' },
-  { name: 'Model III Jeans', price: "$11.99", image: 'https://www.thegoodtrade.com/wp-content/uploads/2023/01/sustainable-jeans.jpg'}
+  { name: 'Model III Jeans', price: "$11.99", image: 'https://www.thegoodtrade.com/wp-content/uploads/2023/01/sustainable-jeans.jpg' }
   // add more items here
 ];
 
@@ -25,15 +25,16 @@ const BrowsePage = () => {
                 />
               </Card.Body>
               <Card.Footer css={{ justifyItems: "flex-start" }}>
-                <Row wrap="wrap" justify="space-between" align="center">
-                  <Text b>{item.name}</Text>
-                  <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
-                    {item.price}
-                  </Text>
+                <Row wrap="wrap" justify="space-between" align="flex-start">
+                  <Col>
+                    <Text b>{item.name}</Text>
+                  </Col>
+                  <Col>
+                    <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
+                      {item.price}
+                    </Text>
+                  </Col>
                 </Row>
-                {/* <Row wrap="wrap" justify="space-between" >
-
-                </Row> */}
               </Card.Footer>
             </Card>
           </Grid>
